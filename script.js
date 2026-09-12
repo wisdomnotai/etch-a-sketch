@@ -18,7 +18,9 @@ const createGrid = (size) => {
 
 //clearing previous grid
 const clearGrid = () =>{
-    container.textContent = ""
+    container.innerHTML = ""
 }
 
+//selecting the button element
+const button = document.querySelector(".popup");
 
