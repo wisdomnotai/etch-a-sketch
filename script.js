@@ -16,7 +16,9 @@ const createGrid = (size) => {
 }
 }
 
-
-
+//clearing previous grid
+const clearGrid = () =>{
+    container.textContent = ""
+}
 
 
