@@ -33,5 +33,5 @@ button.addEventListener("click", () => {
         return;
     }
     clearGrid();
-    createGrid();
+    createGrid(size);
 })
