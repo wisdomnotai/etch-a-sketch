@@ -24,3 +24,14 @@ const clearGrid = () =>{
 //selecting the button element
 const button = document.querySelector(".popup");
 
+button.addEventListener("click", () => {
+    let size = prompt("How many squares per side? (max 100): ");
+    size = Number(size);
+
+    if (size>100){
+        alert("Please enter a number below 100: ");
+        return;
+    }
+    clearGrid();
+    createGrid();
+})
