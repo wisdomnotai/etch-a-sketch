@@ -1,20 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch-a-sketch</title>
-    <link rel = "stylesheet" href = "style.css"/>
-</head>
-<body>
-    <header class="heading">
-    <h2>Etch a Sketch</h2>
-    <button class="popup">Create Grid</button>
-    </header>
-    <div class = "container">
-    
-    </div>
-    <script src="script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="toolbar">
+        <div class="title-wrap">
+          <p class="eyebrow">Creative sketch board</p>
+          <h1>Etch-a-Sketch</h1>
+        </div>
 
-</body>
+        <div class="controls">
+          <div class="color-picker-wrapper">
+            <button id="colorPickerButton" type="button" class="color-picker" aria-label="Choose drawing color" title="Choose color">
+              <span class="color-picker-inner"></span>
+            </button>
+
+            <div id="colorPalette" class="color-palette" aria-label="Color palette">
+              <button type="button" class="palette-swatch active" data-color="#1d4ed8" style="--swatch: #1d4ed8;" title="Blue"></button>
+              <button type="button" class="palette-swatch" data-color="#ef4444" style="--swatch: #ef4444;" title="Red"></button>
+              <button type="button" class="palette-swatch" data-color="#f59e0b" style="--swatch: #f59e0b;" title="Amber"></button>
+              <button type="button" class="palette-swatch" data-color="#10b981" style="--swatch: #10b981;" title="Green"></button>
+              <button type="button" class="palette-swatch" data-color="#a855f7" style="--swatch: #a855f7;" title="Purple"></button>
+              <button type="button" class="palette-swatch" data-color="#ec4899" style="--swatch: #ec4899;" title="Pink"></button>
+              <button type="button" class="palette-swatch" data-color="#f97316" style="--swatch: #f97316;" title="Orange"></button>
+              <button type="button" class="palette-swatch" data-color="#06b6d4" style="--swatch: #06b6d4;" title="Cyan"></button>
+              <button type="button" class="palette-swatch" data-color="#111827" style="--swatch: #111827;" title="Black"></button>
+              <button type="button" class="palette-swatch" data-color="#ffffff" style="--swatch: #ffffff;" title="White"></button>
+            </div>
+          </div>
+
+          <button id="eraserButton" type="button" class="secondary-btn">Eraser</button>
+
+          <label class="control-group size-control" for="gridSize">
+            <span>Grid</span>
+            <input id="gridSize" type="number" min="4" max="40" value="16" />
+          </label>
+
+          <button id="applyGrid" type="button" class="primary-btn">New Grid</button>
+          <button id="clearGrid" type="button" class="secondary-btn">Clear</button>
+          <button id="saveImage" type="button" class="save-btn">Save Image</button>
+        </div>
+      </header>
+
+      <section class="board-wrap">
+        <div class="container" aria-label="Etch-a-sketch drawing board"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
